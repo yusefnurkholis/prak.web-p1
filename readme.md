@@ -21,6 +21,10 @@
  * **RAM:** 8 GB
  * **Storage:** 477 GB
  * **Processor:** AMD Ryzen 7 5700U with redeon graphics
+ * **device ID:** 9F61ECD6-4A89-4E83-8344-B626C1D9FE64
+ * **system type:** 64-bit operating system, x64-based processor
+ * **Grapics card:** AMD Radeon(TM) Graphics (496 MB)
  * **Versi Node.js:** v24.21.0
  * **Versi Git:** version 2.54.0.windows.1
+
  
