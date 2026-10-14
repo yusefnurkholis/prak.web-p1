@@ -1,7 +1,5 @@
 
-/* =========================
-   RESET & DASAR
-========================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -20,9 +18,7 @@ body {
     padding: 20px;
 }
 
-/* =========================
-   HEADER
-========================= */
+
 header {
     background-color: #dcd0f0;
     color: #121213;
@@ -119,9 +115,7 @@ section li {
     margin-bottom: 7px;
 }
 
-/* =========================
-   PROJECT
-========================= */
+
 .project-container {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
