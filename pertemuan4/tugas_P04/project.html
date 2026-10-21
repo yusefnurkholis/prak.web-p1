@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kasir Sederhana</title>
+  <link rel="stylesheet" href="style1.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>🧾 Kasir Sederhana</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="kontak.html">Hubungi Saya</a></li>
+        <li><a href="project.html" aria-current="page">Project</a></li>
+        <li><a href="resume.html">Resume</a></li>
+      </ul>
+  </header>
+
+  <main class="container">
+    <!-- Kartu Statistik -->
+    <section class="stats" aria-label="Statistik">
+      <div class="stat-card">
+        <span class="stat-label">Total Produk</span>
+        <strong id="statTotal">0</strong>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Tersedia</span>
+        <strong id="statTersedia">0</strong>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Habis</span>
+        <strong id="statHabis">0</strong>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Nilai Stok Tersedia</span>
+        <strong id="statNilai">Rp 0</strong>
+      </div>
+    </section>
+
+    <!-- Fitur 1: Form Input Produk -->
+    <section class="panel">
+      <h2>Tambah Produk</h2>
+      <form id="formProduk" novalidate>
+        <div class="form-grid">
+          <div class="field">
+            <label for="namaProduk">Nama Produk</label>
+            <input type="text" id="namaProduk" placeholder="cth: Nasi Goreng" />
+          </div>
+          <div class="field">
+            <label for="kategori">Kategori</label>
+            <select id="kategori">
+              <option value="Makanan">Makanan</option>
+              <option value="Minuman">Minuman</option>
+              <option value="Snack">Snack</option>
+              <option value="Lainnya">Lainnya</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="harga">Harga (Rp)</label>
+            <input type="number" id="harga" placeholder="cth: 15000" min="0" />
+          </div>
+          <div class="field checkbox-field">
+            <label class="checkbox">
+              <input type="checkbox" id="tersedia" checked />
+              <span>Produk tersedia</span>
+            </label>
+          </div>
+        </div>
+        <p id="pesanError" class="error" role="alert"></p>
+        <button type="submit" class="btn btn-primary">+ Tambah Produk</button>
+      </form>
+    </section>
+
+    <div class="layout">
+      <!-- Daftar Produk -->
+      <section class="panel produk-panel">
+        <div class="panel-head">
+          <h2>Daftar Produk</h2>
+          <!-- Fitur 2: Live Search -->
+          <input type="search" id="cari" class="search" placeholder="🔍 Cari nama produk..." />
+        </div>
+        <div id="daftarProduk" class="grid"></div>
+      </section>
+
+      <!-- Keranjang -->
+      <aside class="panel keranjang-panel">
+        <h2>🛒 Keranjang</h2>
+        <ul id="daftarKeranjang" class="cart-list"></ul>
+
+        <div class="total-row">
+          <span>Total</span>
+          <strong id="totalBayar">Rp 0</strong>
+        </div>
+
+        <div class="field">
+          <label for="uangBayar">Uang Dibayar (Rp)</label>
+          <input type="number" id="uangBayar" min="0" placeholder="0" />
+        </div>
+
+        <div class="total-row">
+          <span>Kembalian</span>
+          <strong id="kembalian">Rp 0</strong>
+        </div>
+
+        <p id="pesanBayar" class="error" role="alert"></p>
+
+        <div class="cart-actions">
+          <button id="btnKosongkan" class="btn btn-ghost" type="button">Kosongkan</button>
+          <button id="btnBayar" class="btn btn-primary" type="button">Bayar</button>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Struk -->
+  <div id="modalStruk" class="modal" hidden>
+    <div class="modal-box">
+      <h3>Struk Pembayaran</h3>
+      <pre id="isiStruk"></pre>
+      <button id="tutupStruk" class="btn btn-primary" type="button">Tutup</button>
+    </div>
+  </div>
+
+  <script src="project.js"></script>
+</body>
+</html>

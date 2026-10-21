@@ -1,0 +1,289 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f0fa;
+    color: #333;
+    line-height: 1.7;
+    padding: 20px;
+}
+
+
+header {
+    background-color: #dcd0f0;
+    color: #121213;
+    text-align: center;
+    padding: 35px 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(236, 234, 238, 0.12);
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 1rem;
+}
+
+
+nav {
+    text-align: center;
+    margin: 15px 0 25px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    display: inline-block;
+    color: #49356c;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #e5d9f5;
+    color: #efecf1;
+}
+
+/* Mendukung navigasi yang menggunakan tautan langsung */
+nav ul a {
+    margin: 0;
+}
+
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+section {
+    max-width: 1000px;
+    margin: 0 auto 20px;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 5px solid #f9f8fb;
+    box-shadow: 0 3px 10px rgba(70, 45, 100, 0.08);
+    scroll-margin-top: 20px;
+}
+
+section h2 {
+    color: #604080;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e8def5;
+}
+
+section p {
+    margin-bottom: 10px;
+}
+
+section ul {
+    padding-left: 25px;
+}
+
+section li {
+    margin-bottom: 7px;
+}
+
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #faf7ff;
+    border: 1px solid #e5d9f5;
+    border-radius: 10px;
+    padding: 20px;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #e9e8eb;
+    box-shadow: 0 6px 16px rgba(96, 64, 128, 0.15);
+}
+
+.project-card h3 {
+    color: #e2dce8;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    color: #555;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+/* Label teknologi */
+.project-tag {
+    display: inline-block;
+    background-color: #e8def5;
+    color: #604080;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin: 3px 3px 0 0;
+}
+
+
+.project-card a {
+    display: inline-block;
+    margin-top: auto;
+    padding-top: 12px;
+    color: #7c5d9a;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.project-card a:hover {
+    color: #a16bc1;
+    text-decoration: underline;
+}
+
+
+a {
+    color: #7952a0;
+}
+
+a:hover {
+    color: #a16bc1;
+}
+
+
+#kontak a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#kontak a:hover {
+    text-decoration: underline;
+}
+
+
+footer {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    color: #c3b6d4;
+    font-size: 0.9rem;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    .project-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    section {
+        padding: 20px;
+    }
+}
+
+
+@media (max-width: 500px) {
+    body {
+        padding: 10px;
+    }
+
+    header {
+        padding: 25px 15px;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    nav ul {
+        gap: 5px;
+    }
+
+    nav a {
+        padding: 7px 9px;
+        font-size: 0.9rem;
+    }
+
+    section {
+        padding: 17px;
+    }
+
+    section h2 {
+        font-size: 1.2rem;
+    }
+
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        padding: 18px;
+    }
+}
+
+
+@media print {
+    body {
+        background-color: #fff;
+        padding: 0;
+    }
+
+    header,
+    section {
+        box-shadow: none;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .project-card {
+        break-inside: avoid;
+    }
+}
