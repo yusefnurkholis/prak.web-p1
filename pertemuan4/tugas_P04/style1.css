@@ -20,6 +20,51 @@ body {
   line-height: 1.45;
 }
 
+main.container { display: flex; flex-direction: column; gap: 26px; }
+
+.panel { margin: 0; }
+.panel p { margin: 0 0 10px; }
+.panel ul { padding-left: 22px; }
+.panel li { margin: 4px 0; }
+.panel dl { display: grid; grid-template-columns: minmax(130px, 1fr) 2fr; gap: 8px 18px; }
+.panel dt { font-weight: 700; }
+.panel dd { margin: 0; }
+
+.page-footer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px 24px;
+  color: var(--pudar);
+  font-size: 0.85rem;
+}
+.page-footer p { border-top: 1px solid var(--garis); padding-top: 12px; }
+
+/* Form kontak dengan garis dan warna yang sama dengan panel kasir. */
+.contact-form { display: grid; gap: 16px; max-width: 680px; }
+.contact-form .field { gap: 6px; }
+.contact-form textarea {
+  min-height: 150px;
+  resize: vertical;
+  font: inherit;
+  color: var(--tinta);
+  padding: 8px 2px;
+  background: transparent;
+  border: none;
+  border-bottom: 1.5px solid var(--tinta);
+  border-radius: 0;
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"] { width: 100%; }
+.contact-form textarea:focus { outline: none; background: var(--kertas-gelap); }
+.form-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.panel a { color: var(--stempel); }
+.panel a:hover { color: var(--hijau); }
+
+@media (max-width: 480px) {
+  .panel dl { grid-template-columns: 1fr; gap: 2px; }
+  .panel dd { margin-bottom: 8px; }
+}
+
 h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 700; }
 
 /* angka dan harga pakai monospace biar terasa seperti struk */

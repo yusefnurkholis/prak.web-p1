@@ -1,76 +1,66 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial
-scale=1.0">
-    <title>Modul 2 - Form Kontak</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hubungi Yusep Nur Kholis untuk kolaborasi dan penawaran proyek.">
+    <title>Kontak | Yusep Nur Kholis</title>
+    <link rel="stylesheet" href="style1.css">
 </head>
-
 <body>
-
-    <header>
+    <header class="header">
         <h1>Formulir Kontak</h1>
-        <nav> 
-            <ul> 
-                <li><a href="index.html">Beranda</a></li> 
-                <li><a href="kontak.html">Hubungi Saya</a></li> 
+        <nav aria-label="Navigasi utama">
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="kontak.html" aria-current="page">Hubungi Saya</a></li>
                 <li><a href="project.html">Project</a></li>
                 <li><a href="resume.html">Resume</a></li>
-            </ul> 
-        </nav> 
+            </ul>
+        </nav>
     </header>
 
-    <hr>
-
-    <main>
-        <section>
+    <main class="container">
+        <section class="panel">
             <h2>Kirimkan Pesan atau Penawaran Proyek</h2>
-            <form>
+            <form class="contact-form" action="#" method="get">
+                <div class="field">
+                    <label for="nama_pengirim">Nama lengkap</label>
+                    <input type="text" id="nama_pengirim" name="nama_pengirim" autocomplete="name" required>
+                </div>
+                <div class="field">
+                    <label for="email_pengirim">Alamat email</label>
+                    <input type="email" id="email_pengirim" name="email_pengirim" autocomplete="email" required>
+                </div>
+                <div class="field">
+                    <label for="jenis_layanan">Layanan yang dibutuhkan</label>
+                    <select id="jenis_layanan" name="jenis_layanan" required>
+                        <option value="">-- Pilih layanan --</option>
+                        <option value="web">Pembuatan web</option>
+                        <option value="app">Pengembangan aplikasi</option>
+                        <option value="other">Lain-lain</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="pesan">Pesan</label>
+                    <textarea id="pesan" name="pesan" rows="6" required></textarea>
+                </div>
+                <div class="form-actions">
+                    <button class="btn btn-primary" type="submit">Kirim pesan</button>
+                    <button class="btn btn-ghost" type="reset">Batal / reset</button>
+                </div>
+            </form>
+        </section>
 
-                <p>
-                    <label for="nama_pengirim">Nama Lengkap
-                        Anda:</label><br>
-                    <input type="text" id="nama_pengirim" name="nama_pengirim">
-                </p>
+        <section class="panel">
+            <h2>Kontak Lainnya</h2>
+            <address>
+                <p>Email: <a href="mailto:yusefnurkholis@gmail.com">yusefnurkholis@gmail.com</a></p>
+                <p>Instagram: <a href="https://www.instagram.com/913yunk/">@913yunk</a></p>
+            </address>
+        </section>
+    </main>
 
-                <p>
-                    <label for="email_pengirim">Alamat
-                        Email:</label><br>
-                    <input type="email" id="email_pengirim" name="email_pengirim">
-                </p>
-                <p>
-                    <label for="jenis_layanan">Layanan yang di butuh butuhkan:</label><br>
-</body>
-
-</html>
-
-<select id="jenis_layanan" name="jenis_layanan">
-    <option value="">-- Pilih Layanan --</option>
-    <option value="web">Pembuatan Web</option>
-    <option value="app">Pengembangan Aplikasi</option>
-    <option value="other">Lain-lain</option>
-</select>
-</p>
-<option value="app">Pengembangan aplikasi</option>
-<p>
-    <label for="pesan">Pesan:</label><br>
-    <textarea id="pesan" name="pesan" rows="6" cols="50"></textarea>
-</p>
-<p>
-    
-    <button type="submit">Kirim Pesan</button>
-    <button type="reset">Batal / Reset</button>
-</p>
-</form>
-</section>
-</main>
-<hr>
-<footer>
-    <p>&copy; 2026 Teknik Informatika ITG</p>
-</footer>
-
+    <footer class="page-footer"><p>&copy; 2026 Teknik Informatika ITG</p></footer>
 </body>
 </html>
