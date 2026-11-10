@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let resolveConfirmation = null;
     let previouslyFocusedElement = null;
 
+
     const closeConfirmation = (confirmed) => {
         confirmOverlay.hidden = true;
         document.body.style.overflow = "";
